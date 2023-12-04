@@ -68,7 +68,7 @@ python manage.py runserver
 python manage.py createsuperuser
 ```
 
-Дополнительно
+### Дополнительно
 <details>
 <summary>Учебные и справочные материалы</summary>
 
