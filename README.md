@@ -27,8 +27,8 @@ pybas-202305
 │   │   ├── repaire_migrations   # полный ремонт миграций
 │   │   └── К проекту 20231204   # презентация к проекту (очень краткая)
 │   ├── ms_sql_server            # набор файлов к запуску MS SQL Server в docker
-│   ├── PostgreSQL               # набор файлов к запуску PostgreSQL в docker
-│   ├── sql                      # скрипты для генерации данных
+│   ├── PostgreSQL               # набор файлов к запуску PostgreSQL & PGAdmin в docker
+│   ├── sql                      # sql скрипты для генерации данных
 │   └── nomad                    
 │       ├── emaillist            # ПРИЛОЖЕНИЕ
 │       │   ├── tests            # тесты
