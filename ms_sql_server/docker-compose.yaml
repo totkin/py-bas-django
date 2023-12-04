@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  mssql:
+    build:
+      context: .
+      dockerfile: mssql.dockerfile
+    hostname: s-sql5
+    container_name: s-sql5
+    ports:
+      - 1433:1433
+    volumes:
+      - ~/apps/mssql/data:/var/lib/mssqlql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=StrongPass123
+      - MSSQL_PID=DEVELOPER
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$$SA_PASSWORD" -Q "SELECT 1" || exit 1
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s

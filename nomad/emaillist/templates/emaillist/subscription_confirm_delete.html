@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Удалить рассылку</h1>
+
+  <p>Вы уверены, что хотите удалить рассылку: {{ subscription.name }}?</p>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Да, удалить" />
+    <input type="button" value="Отмена" onClick="window.location.href='{% url 'subscriptions' %}';" />
+  </form>
+{% endblock %}

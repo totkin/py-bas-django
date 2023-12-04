@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "py-bas-django"
+version = "0.1.0"
+description = ""
+authors = ["totkin <test4git@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.6"
+django-debug-toolbar = "^4.2.0"
+celery = "^5.3.4"
+mssql-django = "^1.3"
+django-environ = "^0.11.2"
+psycopg2 = "^2.9.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

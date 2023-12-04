@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список менеджеров</h1>
+
+    <form class="add_your_class" method="GET" action="" >
+        <input class="add_your_class" type="search" name="search">
+        <button class="add_your_class" type="submit"> Поиск </button>
+    </form>
+
+<hr>
+
+    {% if manager_list %}
+    <ul>
+
+      {% for manager in manager_list %}
+      <li>
+        <a href="{{ manager.get_absolute_url }}">{{ manager.full_name }}</a>, {{manager.department}}, {{manager.title}}, <a href="{% url 'renew-Manager' manager.id %}"> Изменить ФИО</a>
+          <!--{% if perms.emaillist.can_mark_returned %}-  -->
+
+          <!--{% endif %} -->
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+
+    {% endif %}
+
+
+
+{% endblock %}
+
+
+
+

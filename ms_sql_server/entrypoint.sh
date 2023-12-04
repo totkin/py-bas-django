@@ -1,0 +1,1 @@
+/opt/mssql/bin/sqlservr & /usr/config/configure-db.sh

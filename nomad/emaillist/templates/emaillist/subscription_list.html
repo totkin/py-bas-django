@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список Рассылок</h1>
+
+    {% if subscription_list %}
+    <table>
+          {% for subscription in subscription_list %}
+           <tr>
+           <td><{{ subscription.id }}> </td>
+           <td>
+               <a href="{{ subscription.get_absolute_url }}">{{ subscription.name }}</a>
+           </td>
+           <td></td>
+           <td>
+               {{subscription.status}}, {{subscription.frequency}}
+           </td>
+           <td></td>
+           <td><a href="{{ subscription.get_absolute_url }}/delete/">Удалить</a> </td>
+           </tr>
+          {% endfor %}
+    </table>
+    </ul>
+    {% else %}
+      <p>В списке нет рассылок.</p>
+    {% endif %}
+
+<hr>
+<a href="{% url 'subscription_create' %}">Добавить</a></li>
+{% endblock %}

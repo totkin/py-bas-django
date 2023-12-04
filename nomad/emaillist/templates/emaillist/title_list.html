@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список Должостей</h1>
+
+    {% if title_list %}
+    <ul>
+
+      {% for title in title_list %}
+      <li>
+        <a href="{{ title.get_absolute_url }}">{{ title.name }}</a> {{title.short_name}}
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>В списке нет должностей.</p>
+    {% endif %}
+
+{% endblock %}

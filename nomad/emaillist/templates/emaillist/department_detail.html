@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>{{ department.name }}</h2>
+
+  <p><strong>Краткое наименование:</strong> {{ department.short_name }}</p>
+  <p><strong>Дополнительная информация:</strong> {{ department.additional_info }}</p>
+
+{% endblock %}

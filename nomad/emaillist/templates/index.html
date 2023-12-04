@@ -1,0 +1,35 @@
+{% extends "base_generic.html" %}
+
+{% block departments %}
+    {% for department in departments %}
+    <li>
+        <a class="dropdown-item" href="{{ department.get_absolute_url }}">{{ department.name }}</a>
+    </li>
+    {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+
+    <img src="/../../media/logo_light.gif" style="margin-right:1px;"> <span class="h1 align-bottom">Списки рассылок</span>
+
+
+
+    <p>Вы находитесь в <em>EmailList</em> - приложении для работы со списками рассылок.</p>
+
+
+
+    <p>Рассылками охвачено</p>
+    <ul>
+        Всего
+        <li><strong>менеджеров</strong> {{ num_Managers }} из <strong>{{ num_Departments }}</strong> отделов.</li>
+        <li><strong>рассылок:</strong> {{ num_Subscriptions }}</li>
+    </ul>
+{% endblock %}
+
+{% block footer %}
+      You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{%
+      else %} times{% endif %}.
+{% endblock %}
+
+

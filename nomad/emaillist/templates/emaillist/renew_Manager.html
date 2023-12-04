@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+    <h1>Изменить ФИО: {{managerinst.full_name}}}</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+<hr>
+        {{form.as_p}}
+
+        <input type="submit" value="Submit" />
+    </form>
+
+{% endblock %}
