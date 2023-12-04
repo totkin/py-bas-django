@@ -51,13 +51,13 @@ pybas-202305
 
 ### Команды
 
-Запуск/остановка докера
+Запуск/остановка докера (PostgreSQL)
 ```bash
 cd PostgreSQL
 docker compose -f docker-compose-local.yml up
 docker compose -f docker-compose-local.yml down -v
 ```
-Подготовка и накат миграций
+Подготовка и накат миграций (пример)
 ```bash
 python manage.py makemigrations emaillist
 python manage.py migrate emaillist
