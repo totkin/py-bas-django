@@ -1,4 +1,4 @@
-name: flake8 easy hpmework_09 check
+name: flake8 easy check
 
 on: [push]
 
@@ -20,4 +20,4 @@ jobs:
         pip install flake8
     - name: Analysing the code with pylint
       run: |
-        flake8 --extend-ignore=E501,E303,E712,F841,F401 ./homework_09/
+        flake8 --extend-ignore=E501,E303,E712,F841,F401 ./nomad/
